@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài thực hành nhóm</title>
+</head>
+<body>
+    <table border="1"
+           style="width: 650px; margin: auto; border-collapse: collapse;">
+        <tr style="background-color: lightblue;">
+            <th colspan="2" style="height: 40px;">
+                BÀI THỰC HÀNH NHÓM ...
+            </th>
+        </tr>
+
+        <tr>
+            <td style="width: 155px; padding: 8px; vertical-align: top;">
+                <b>Thông tin các mùa trong năm</b>
+
+                <ul>
+                    <li>
+                        <a href="https://img.thuthuat123.com/uploads/2019/07/15/anh-bong-hoa-hong-bay-mau_105817556.jpg"
+                           onclick="doiMua(this.href, 'MÙA XUÂN', 'Mùa xuân là mùa đẹp nhất ...'); return false;">
+                            Mùa xuân
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://tse4.mm.bing.net/th/id/OIP.f8D17btbwwm3oDhekD9lZgHaFG?r=0&amp;pid=Api&amp;h=220&amp;P=0"
+                           onclick="doiMua(this.href, 'MÙA HẠ', 'Mùa hạ có ánh nắng rực rỡ ...'); return false;">
+                            Mùa hạ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://tse2.mm.bing.net/th/id/OIP.pM7jCz6GkutzCiyppMWPnwHaE7?r=0&amp;pid=Api&amp;h=220&amp;P=0"
+                           onclick="doiMua(this.href, 'MÙA THU', 'Mùa thu có những chiếc lá vàng ...'); return false;">
+                            Mùa thu
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://tse1.mm.bing.net/th/id/OIP.PzYZEuku8eAKMBscWYHnLgHaE8?r=0&amp;pid=Api&amp;h=220&amp;P=0"
+                           onclick="doiMua(this.href, 'MÙA ĐÔNG', 'Mùa đông có thời tiết lạnh ...'); return false;">
+                            Mùa đông
+                        </a>
+                    </li>
+                </ul>
+
+                <b>Học tập</b>
+
+                <ul>
+                    <li>
+                        <a href="Baitap3.html"
+                           target="noidung"
+                           onclick="hienLichHoc();">
+                            Lịch học
+                        </a>
+                    </li>
+                </ul>
+
+                <b>Danh sách thành viên</b>
+
+                <ol>
+                    <li>Nguyễn Văn A</li>
+                    <li>Phạm Văn B</li>
+                    <li>...</li>
+                </ol>
+            </td>
+
+            <td style="padding: 0; vertical-align: top;">
+                <div id="khungmua"
+                     style="background-color: lightgreen; text-align: center; min-height: 360px;">
+
+                    <h1 id="tieude"
+                        style="color: blue; font-size: 36px; font-weight: normal; margin: 0; padding: 12px;">
+                        MÙA XUÂN
+                    </h1>
+
+                    <img
+                        id="hinhanh"
+                        src="https://img.thuthuat123.com/uploads/2019/07/15/anh-bong-hoa-hong-bay-mau_105817556.jpg"
+                        alt="MÙA XUÂN"
+                        style="width: 315px; max-width: 100%; height: 237px; object-fit: contain;"
+                    >
+
+                    <p id="mota" style="color: red;">
+                        Mùa xuân là mùa đẹp nhất ...
+                    </p>
+                </div>
+
+                <iframe
+                    id="khunglich"
+                    name="noidung"
+                    title="Lịch học"
+                    style="width: 100%; height: 360px; border: none; display: none;">
+                </iframe>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function doiMua(anh, ten, mota) {
+            document.getElementById("khungmua").style.display = "block";
+            document.getElementById("khunglich").style.display = "none";
+
+            document.getElementById("hinhanh").src = anh;
+            document.getElementById("hinhanh").alt = ten;
+            document.getElementById("tieude").textContent = ten;
+            document.getElementById("mota").textContent = mota;
+        }
+
+        function hienLichHoc() {
+            document.getElementById("khungmua").style.display = "none";
+            document.getElementById("khunglich").style.display = "block";
+        }
+    </script>
+</body>
+</html>
